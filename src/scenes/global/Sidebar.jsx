@@ -4,7 +4,7 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -16,6 +16,17 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { mockDataTeam } from "../../data/mockData";
+//new imports
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import CorporateFareOutlinedIcon from '@mui/icons-material/CorporateFareOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
+import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
+import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -110,7 +121,7 @@ const Sidebar = () => {
                   Ed Roh
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  SUPER ADMIN
                 </Typography>
               </Box>
             </Box>
@@ -124,6 +135,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Item
+              title="DashboardSettings"
+              to="/dashboardsettings"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
             <Typography
               variant="h6"
@@ -132,24 +150,47 @@ const Sidebar = () => {
             >
               Data
             </Typography>
-            <Item
+            {/* {console.log(mockDataTeam)}
+
+            {mockDataTeam.map((element) => {
+        if (element.access === "admin") {
+          return <Item
+          title="Manage Team"
+          to="/team"
+          icon={<PeopleOutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        }
+        return "hihi"
+      })} */}
+
+            {/* <Item
               title="Manage Team"
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
-              title="Contacts Information"
-              to="/contacts"
-              icon={<ContactsOutlinedIcon />}
+              title="Contacts Information/Academics"
+               //to="/contacts"
+              to="/academics"
+              icon={<SchoolOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
+              title="Invoices Balances/Administrative"
               to="/invoices"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<CorporateFareOutlinedIcon/>}
+              selected={selected}
+              setSelected={setSelected}
+            />
+              <Item
+              title="Invoices Balances/Students"
+              to="/invoices"
+              icon={<PeopleAltOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -162,23 +203,23 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Profile Form/Users"
               to="/form"
-              icon={<PersonOutlinedIcon />}
+              icon={<GroupsOutlinedIcon  />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
+              title="Calendar/Classes"
               to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
+              icon={<ClassOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="FAQ Page"
+              title="FAQ Page/Subjects"
               to="/faq"
-              icon={<HelpOutlineOutlinedIcon />}
+              icon={< AutoStoriesOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
@@ -191,30 +232,23 @@ const Sidebar = () => {
               Charts
             </Typography>
             <Item
-              title="Bar Chart"
+              title="Bar Chart/Exams"
               to="/bar"
-              icon={<BarChartOutlinedIcon />}
+              icon={<DesignServicesOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Pie Chart"
+              title="Pie Chart/Settings"
               to="/pie"
-              icon={<PieChartOutlineOutlinedIcon />}
+              icon={<SettingsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Line Chart"
+              title="Line Chart/My Account"
               to="/line"
-              icon={<TimelineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Geography Chart"
-              to="/geography"
-              icon={<MapOutlinedIcon />}
+              icon={< PersonOutlineOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />

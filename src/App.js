@@ -3,9 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
+import DashboardSettings from "./scenes/dashboardsettings";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
+import Academics from "./scenes/academics";
 import Bar from "./scenes/bar";
 import Form from "./scenes/form";
 import Line from "./scenes/line";
@@ -30,8 +32,10 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboardsettings" element={<DashboardSettings/>} />
               <Route path="/team" element={<Team />} />
-              <Route path="/contacts" element={<Contacts />} />
+              {/* <Route path="/contacts" element={<Contacts />} /> */}
+              <Route path="/academics" element={<Academics />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
