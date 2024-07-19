@@ -30,7 +30,7 @@ const Dashboardsettings = () => {
         schoolEmail: '',
         schoolAddress: '',
         termEndingDate: '',
-        nextTermBeginningDate: ''
+        nextTermBeginningDate: '',
         crecheFees: '',
         nurseryFees: '',
         primaryFees: '',

@@ -204,7 +204,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Profile Form/Users"
-              to="/form"
+              to="/users"
               icon={<GroupsOutlinedIcon  />}
               selected={selected}
               setSelected={setSelected}
