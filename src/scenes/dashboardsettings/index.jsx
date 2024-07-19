@@ -30,11 +30,12 @@ const Dashboardsettings = () => {
         schoolEmail: '',
         schoolAddress: '',
         termEndingDate: '',
-        nextTermBeginningDate: ''
+        nextTermBeginningDate: '',
         crecheFees: '',
+        juniorSecretaryFees: '',
         nurseryFees: '',
+        preNurseryFees: '',
         primaryFees: '',
-        secondaryFees: '',
         seniorSecondaryFees: '',
       });
     
@@ -211,48 +212,49 @@ const Dashboardsettings = () => {
             <Row className="mb-3">
       <Form.Group as={Col}>
         <Form.Label>Creche</Form.Label>
-<Form.Control type="text"  value={formData.cre} onchange={handleChange}/>
+<Form.Control type="text"  value={formData.crecheFees} onchange={handleChange}/>
       </Form.Group>
 
       <Form.Group as={Col}>
-        <Form.Label>Current Session</Form.Label>
-<Form.Control type="text" placeholder="2023-2024" value={formData.currentSession} onchange={handleChange}/>
+        <Form.Label>Junior Secretary</Form.Label>
+<Form.Control type="text" value={formData.juniorSecretaryFees} onchange={handleChange}/>
       </Form.Group>
     </Row>
 
     <Row className="mb-3">
       <Form.Group as={Col}>
-        <Form.Label>Phone Number</Form.Label>
-<Form.Control type="text" value={formData.phoneNumber} onchange={handleChange}/>
+        <Form.Label>Nursery</Form.Label>
+<Form.Control type="text" value={formData.nurseryFees} onchange={handleChange}/>
       </Form.Group>
 
       <Form.Group as={Col}>
-        <Form.Label>School Email</Form.Label>
-<Form.Control type="text"  value={formData.schoolEmail} onchange={handleChange}/>
+        <Form.Label>Pre Nursery</Form.Label>
+<Form.Control type="text"  value={formData.preNurseryFees} onchange={handleChange}/>
       </Form.Group>
     </Row>
-
-    <Form.Group className="mb-3" >
-      <Form.Label>Address</Form.Label>
-      <Form.Control type="text" value={formData.schoolAddress} onchange={handleChange} />
-    </Form.Group>
-
     <Row className="mb-3">
       <Form.Group as={Col}>
-        <Form.Label>This term ends</Form.Label>
-<Form.Control type="text" placeholder="MM-DD-YYYY" value={formData.termEndingDate} onchange={handleChange}/>
+        <Form.Label>Primary</Form.Label>
+<Form.Control type="text" value={formData.primaryFeesFees} onchange={handleChange}/>
       </Form.Group>
 
       <Form.Group as={Col}>
-        <Form.Label>Next term begins</Form.Label>
-<Form.Control type="text"  placeholder="MM-DD-YYYY" value={formData.nextTermBeginningDate} onchange={handleChange}/>
+        <Form.Label>Senior Secondary</Form.Label>
+<Form.Control type="text"  value={formData.seniorSecondaryFees} onchange={handleChange}/>
       </Form.Group>
     </Row>
     <Form.Group className="mb-3" >
-      <Form.Label>School acronym</Form.Label>
-      <Form.Control type="text" value={formData.schoolAcronym} onchange={handleChange} />
+      <Form.Label>Change Logo</Form.Label>
     </Form.Group>
+    <img
+              src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
+              height='50'
+              alt=''
+              loading='lazy'
+
+    />
   </Form>
+  
             </div>
     </div>
       );
