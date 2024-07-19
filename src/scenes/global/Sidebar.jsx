@@ -182,14 +182,14 @@ const Sidebar = () => {
             />
             <Item
               title="Invoices Balances/Administrative"
-              to="/invoices"
+              to="/administrative"
               icon={<CorporateFareOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
               <Item
               title="Invoices Balances/Students"
-              to="/invoices"
+              to="/students"
               icon={<PeopleAltOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -211,14 +211,14 @@ const Sidebar = () => {
             />
             <Item
               title="Calendar/Classes"
-              to="/calendar"
+              to="/classes"
               icon={<ClassOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="FAQ Page/Subjects"
-              to="/faq"
+              to="/subjects"
               icon={< AutoStoriesOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}

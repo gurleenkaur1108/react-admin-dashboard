@@ -11,6 +11,7 @@ import Academics from "./scenes/academics";
 import Bar from "./scenes/bar";
 // import Form from "./scenes/form";
 import User from "./scenes/users";
+import  Classes from "./scenes/classes";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
@@ -18,6 +19,9 @@ import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
+import Students from "./scenes/students";
+import Admin from "./scenes/administrative";
+import Subjects from "./scenes/subjects";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -37,14 +41,15 @@ function App() {
               <Route path="/team" element={<Team />} />
               {/* <Route path="/contacts" element={<Contacts />} /> */}
               <Route path="/academics" element={<Academics />} />
-              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/students" element={<Students />} />
+              <Route path="/administrative" element={<Admin />} />
               {/* <Route path="/form" element={<Form />} /> */}
-              <Route path="/form" element={<User />} />
-              <Route path="/form" element={<Classes />} />
+              <Route path="/users" element={<User />} />
+              <Route path="/classes" element={<Classes />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
-              <Route path="/faq" element={<FAQ />} />
+              <Route path="/subjects" element={<Subjects />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
             </Routes>
